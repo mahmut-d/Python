@@ -84,4 +84,14 @@ def hesapla(yas,boy,*args):
     output=yas+boy
     return output
 
+#%%Lambda Function
+    
+def hesapla(x):
+    output=x*x
+    return output
+
+sonuc=hesapla(3)
+
+sonuc2=lambda x: x*x
+print(sonuc2(4))
     
