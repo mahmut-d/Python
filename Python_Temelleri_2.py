@@ -45,3 +45,74 @@ def deneme():
     return dictionary
 
 dic=deneme()
+
+#%%Conditionals
+#if else statement
+
+var1=10
+var2=20
+
+if(var1>var2):
+    print("var1 buyuktur")
+elif(var1==var2):
+    print("essitirler")
+else:
+    print("var2 buyuktur")
+    
+liste=[1,2,3,4,5]
+
+value=3
+if value in liste:
+    print("evet {} degeri liste içiresinde".format(value))
+else:
+    print("hayir")
+
+keys = dictionary.keys()
+if "ali" in keys:
+    print("evet")
+else:
+    print("hayir")
+    
+#%% 
+#metot yazın
+#input=int yıllar
+#output=int yuzyıl
+
+def year2century(year):
+    str_year=str(year)  
+    
+    if(len(str_year)<3):
+        return 1
+    elif(len(str_year)==3):
+        if(str_year[1:3]=="00"): #100,200,300,800
+            return int(str_year[0])
+        else:                   #120,650,820
+            return int(str_year[0])+1 
+    else:
+        if(str_year[2:4]=="00"):#1700,1400,1300
+            return int(str_year[:2])
+        else:                    #1520,1780,1488
+            return int(str_year[:2])+1
+
+year2century(2005)
+
+#%%loop
+
+for each in range(1,11):
+    print(each)
+    
+for mem in "ankara istanbul":
+    print(mem)
+
+for mem in "ankara istanbul".split():
+    print(mem)
+    
+liste=[1,2,3,8,14,16,54]
+    
+
+print(sum(liste))
+
+count=0
+for top in liste:
+    count = count + top
+print(count)
