@@ -116,3 +116,31 @@ count=0
 for top in liste:
     count = count + top
 print(count)
+
+#%%whlie loop
+
+i=0
+while(i<4):
+    print(i)
+    i=i+1
+    
+    
+count=0
+each=0
+sinir=len(liste)
+while(each<sinir):
+    count=count+liste[each]
+    each=each+1
+#%%example 
+
+#verilenen listenin en kücük elemanını bulunuz...
+    
+liste=[1,24,35,-550,78,945,12,0,3]
+
+mini=100000
+for each in liste:
+    if(each<mini):
+        mini=each
+    else:
+        continue
+print(mini)
