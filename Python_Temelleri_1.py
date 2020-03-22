@@ -68,7 +68,7 @@ def ilk_fonkison(var1,var2):
 #default flexible function
 
 #default    
-def cemeber_cevre_hesap(r):
+def cember_cevre_hesap(r):
     """
     cember cevresi hesaplama
     input(parametre)=r
