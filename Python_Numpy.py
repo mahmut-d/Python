@@ -69,3 +69,71 @@ print(np.sqrt(a))
 print(np.square(a))#a**2
 
 print(np.add(a,a))
+
+#%% Indexing and Slicing
+
+array=np.array([1,2,3,4,5,6,7])
+
+print(array[0])
+print(array[0:4])
+
+reverse_array=array[::-1]
+print(reverse_array)
+
+array1=np.array([[1,2,3,4,5],[6,7,8,9,10]])
+
+print(array1[1,1])
+print(array1[:,1])
+print(array1[1,1:4])
+print(array1[-1,:])
+print(array1[:,-1])
+
+#%% Shape Manipulation
+
+array=np.array([[1,2,3],[4,5,6],[7,8,9]])
+
+#flatten 
+a=array.ravel()
+
+array2=a.reshape(3,3)
+
+arrayT=array2.T
+
+print(arrayT.shape)
+
+array5=np.array([[1,2],[3,4],[5,6]])
+
+#%%Stacking Arrays
+
+array1=np.array([[1,2],[3,4]])
+array2=np.array([[-1,-2],[-3,-4]])
+""" Vertical
+[1,2]
+[3,4]
+[-1,-2]
+[-3,-4]
+"""
+array3=np.vstack((array1,array2))
+"""Horizontal
+[1,2] [-1,-2]
+[3,4] [-3,-4]
+"""
+array4=np.hstack((array1,array2))
+
+#%% Convert and Copy
+
+liste=[1,2,3,4] #liste
+array=np.array([liste]) #np.array
+
+liste2=list(array)
+
+a=np.array([1,2,3])
+b=a
+b[0]=5  #sadece b'nin elamanı değil a,b,c nin de 0. elamanı değişir
+c=b
+
+d=np.array([1,2,3])
+e=d.copy()
+e[0]=7 #copy yaparak sadece e'nin elamanı değiştirilebilir çünkü ramda ayrı yer açılmıştır
+f=d.copy()
+
