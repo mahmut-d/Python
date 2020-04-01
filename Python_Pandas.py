@@ -91,4 +91,28 @@ dataframe1.columns=[each.lower() for each in dataframe1.columns]
 
 dataframe1.columns = [each.split()[0]+"_"+each.split()[1] if(len(each.split())>1) else each for each in dataframe1.columns]
 
+# %% drop and Concatenating
 
+dataframe1.drop(["yeni_sutun"],axis=1,inplace=True) #axis=1(sütun) asix=0(satır), inplace=yap ve uygula
+
+data1=dataframe1.head()
+data2=dataframe1.tail()
+
+#vertical
+data_concat=pd.concat([data1,data2],axis=0)
+
+#horizontal
+maas=dataframe1.maas
+yas=dataframe1.yas
+
+data_h_concat=pd.concat([maas,yas],axis=1)
+
+# %% Transforming Data
+
+dataframe1["list_comp"]=[each*2 for each in dataframe1.yas]
+
+# Apply ()
+
+def multiply(yas):
+    return yas*2
+dataframe1["apply_metodu"]=dataframe1.yas.apply(multiply)
