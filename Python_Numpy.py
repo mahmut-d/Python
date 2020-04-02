@@ -5,7 +5,6 @@ Created on Wed Mar 25 18:16:06 2020
 @author: Falcon
 """
 
-
 #importing
 import numpy as np
 #Numpy Basics
