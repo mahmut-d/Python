@@ -24,9 +24,10 @@ dataframe1=pd.DataFrame(dictionary)
 head=dataframe1.head(3) #ilk 3 veriyi gösterir
 tail=dataframe1.tail(3) #son 3 veriyi gösterir
 
-# %% Pandas basic method
+# %% aPPPPndas basic method
 
 print(dataframe1.columns)
+
 
 print(dataframe1.info())
 
